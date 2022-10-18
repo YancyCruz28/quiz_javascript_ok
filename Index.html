@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <!--  estilos bootstrap -->
+    <link rel="stylesheet" href="./bootstrap-5.2.1-dist/css/bootstrap.min.css">
+   
+   <!--   estilos css -->
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+  
+<!-- barra de navegación -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">BIT</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown d-flex justify-content-end">
+            <ul class="navbar-nav d-flex justify-content-end w-100">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#all_form">Generación Carnet</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#all_calculadora">Calculadora</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<!-- formulario -->
+
+    <section>
+      <div id="all_form">
+        <h1 class="text_1">FORMULARIO CARNET</h1>
+      <div class="mt-5 d-flex justify-content-center w-100">
+       <div class="w-50 border p-4 rounded shadow">
+        <h2 class="text-center mb-10px">Datos Personales</h2>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombres</label>
+          <input type="texto" class="form-control" id="nombre" placeholder="Ingresa tus nombres">
+        </div>
+        <div class="mb-3">
+          <label for="apellido" class="form-label">Apellidos</label>
+          <input type="texto" class="form-control" id="apellido" placeholder="Ingresa tus apellidos">
+        </div>
+        <div class="mb-3">
+          <label for="edad" class="form-label">Edad</label>
+          <input type="number" class="form-control" id="edad" placeholder="Ingresa tu edad">
+        </div>
+        <div class="mb-3">
+          <label for="cargo" class="form-label">Cargo</label>
+          <input type="texto" class="form-control" id="cargo" placeholder="Ingresa tu cargo">
+        </div>
+        <div class="mb-3">
+          <label for="rh" class="form-label">RH</label>
+          <input type="texto" class="form-control" id="rh" placeholder="Ingresa tu RH">
+        </div>
+        <div class="mb-3">
+          <label for="ident" class="form-label">Número de documento</label>
+          <input type="number" class="form-control" id="ident" placeholder="Ingresa tu número de identificación">
+        </div>
+        <div class="mb-3">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input type="number" class="form-control" id="telefono" placeholder="Ingresa tu teléfono">
+        </div>
+        <div class="mb-3">
+        <input type="checkbox" id="dato" name="condicion" >
+        <label for="dato"> Acepto  <a href="#"> terminos y politicas de privacidad</a></label>
+      </div>
+       <div class="btn d-flex justify-content-center">
+        <a class="btn btn-warning btn-sm w-50" href="#" onclick="register()">Enviar</a>
+      </div>
+      </div>
+      </div>
+    </div>
+    </section>
+
+   <!--  calculadora -->
+  <div id="all_calculadora">
+    <h1 class="text_1">CALCULADORA</h1>
+   <div class="container">
+    <div class="calculadora">
+        <div class="display">
+            <div id="valor_anterior"></div>
+            <div id="valor_actual"></div>
+        </div>
+        <button class="col-2" onclick="display.borrarTodo()">C</button>
+        <button onclick="display.borrar()">&larr;</button>
+        <button class="operador" value="dividir">/</button>
+        <button class="numero">7</button>
+        <button class="numero">8</button>
+        <button class="numero">9</button>
+        <button class="operador" value="multiplicar">*</button>
+        <button class="numero">4</button>
+        <button class="numero">5</button>
+        <button class="numero">6</button>
+        <button class="operador" value="restar">-</button>
+        <button class="numero">1</button>
+        <button class="numero">2</button>
+        <button class="numero">3</button>
+        <button class="operador" value="sumar">+</button>
+        <button class="col-2">0</button>
+        <button class="numero">.</button>
+        <button class="operador" value="igual">=</button>
+    </div>
+</div>
+</div>
+    
+   <!-- scripts -->
+    <script src="./operador.js"></script>
+    <script src="script.js"></script>
+    <script src="./bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
